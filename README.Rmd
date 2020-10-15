@@ -1,0 +1,36 @@
+---
+title: "Pepsico Data Challenge"
+author: "Sam Tauke"
+date: "10/14/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Summary
+
+This code is my submission to the 2020 Pepsico Data Science challenge sponsored by the New York Academy of Sciences.  The original posting of the challenge description is available 
+[here](https://www.nyas.org/challenges/pepsico-challenge/?utm_source=PepsiCo+Data+Challenge+2020&utm_campaign=7deec2e1ed-EMAIL_CAMPAIGN_2020_10_08_08_22&utm_medium=email&utm_term=0_0568b79be0-7deec2e1ed-331285254).  
+
+
+The code in this project reads in the data provided in excel form as part of the challenge and cleans/builds that data into a usable dataset for the regression model.  The regression model predicts the assessment outcome across 28 different assessment types and two grain varieties using a multivariate linear regression .  
+
+The model performs well for most assessment types but there are several instances where there are clear failings in its predictive abilities.  Future projects will focus on improving the reliability of the model for these specific instances and validating that a linear model is appropriate for this data. 
+
+
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
