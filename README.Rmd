@@ -1,5 +1,5 @@
 ---
-title: "Pepsico Data Challenge"
+title: "Pepsico Data Challenge - Linear Regression Model"
 author: "Sam Tauke"
 date: "10/14/2020"
 output: html_document
@@ -15,22 +15,34 @@ This code is my submission to the 2020 Pepsico Data Science challenge sponsored 
 [here](https://www.nyas.org/challenges/pepsico-challenge/?utm_source=PepsiCo+Data+Challenge+2020&utm_campaign=7deec2e1ed-EMAIL_CAMPAIGN_2020_10_08_08_22&utm_medium=email&utm_term=0_0568b79be0-7deec2e1ed-331285254).  
 
 
-The code in this project reads in the data provided in excel form as part of the challenge and cleans/builds that data into a usable dataset for the regression model.  The regression model predicts the assessment outcome across 28 different assessment types and two grain varieties using a multivariate linear regression .  
-
-The model performs well for most assessment types but there are several instances where there are clear failings in its predictive abilities.  Future projects will focus on improving the reliability of the model for these specific instances and validating that a linear model is appropriate for this data. 
+The purpose of the challenge was to devise a model that predicts the scores from 28 different assessments on two grain varieties across a number of different testing sites. To do this I built a linear regression model that regresses the assessment scores against a variety of explanatory variables including weather, soil quality, and growth stage.  The model allows for variation between testing sites, assessment types, and grain varieties.
 
 
+The model performs well for most assessment types but there are several instances where there are clear failings in its predictive abilities.  Those are easily identifiable as the assessment_score/grain variety combinations where we see very low adjusted r-squared values.  Future projects will focus on improving the reliability of the model for these specific instances and validating that a linear model is appropriate for this data. 
 
-```{r cars}
-summary(cars)
-```
 
-## Including Plots
+## Instructions
 
-You can also embed plots, for example:
+1. Downloading the data
+    * Users of this code will need to download the data either from the challenge description [website](https://www.nyas.org/challenges/pepsico-challenge/?utm_source=PepsiCo+Data+Challenge+2020&utm_campaign=7deec2e1ed-EMAIL_CAMPAIGN_2020_10_08_08_22&utm_medium=email&utm_term=0_0568b79be0-7deec2e1ed-331285254) (if it is still live) or from my excel live [folder](https://1drv.ms/x/s!AkFlokYzR3chglaicMpBTYD59LqN?e=3R4gy0).
+    * The data should be saved with its current name: "nyas-challenge-2020-data.xlsx" as an excel file
+    * The data should be saved in the same directory as the R Code
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+2. Run the Code
+    * Run the code file "nyas_submission_model.r"
+    * The file requires that certain libraries be installed and loaded by the program
+3. Output
+    * The code file exports a csv called "predicted_scores.csv" to your working directory.  This csv contains all of the original observations and the predicted score or text indicating that no score was predicted due to the date of the observation or data errors.
+    
+    
+    
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Contact
+
+If you have questions I can be reached at samtauke@gmail.com
+
+
+
+
+
